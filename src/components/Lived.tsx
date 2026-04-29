@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 
 interface TextCell {
   kind: 'text';
@@ -56,7 +57,7 @@ export const Lived: React.FC = () => (
           <div key={i} style={{ gridColumn: cell.c, gridRow: cell.r, borderRadius: 6, overflow: 'hidden', position: 'relative', background: cell.kind === 'text' ? cell.bg : '#0E0F12' }}>
             {cell.kind === 'photo' ? (
               <>
-                <img src={cell.src} alt={cell.caption} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <Img src={cell.src} alt={cell.caption} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 <div style={{ position: 'absolute', top: 14, left: 14, background: 'rgba(255,255,255,.92)', padding: '5px 10px', borderRadius: 999, fontSize: 10, letterSpacing: '.14em', textTransform: 'uppercase', fontWeight: 700, color: '#0E0F12' }}>VILLAGE · MMXXV</div>
                 <div style={{ position: 'absolute', left: 14, bottom: 14, right: 14, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                   <span style={{ color: '#fff', fontFamily: 'ui-monospace, monospace', fontSize: 11, letterSpacing: '.06em', textShadow: '0 1px 8px rgba(0,0,0,.6)' }}>{cell.caption}</span>

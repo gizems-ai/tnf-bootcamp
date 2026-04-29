@@ -1,5 +1,6 @@
 import React from 'react';
 import { Lockup } from './Shell';
+import { ReserveForm } from './ReserveForm';
 
 const navCols = [
   { t: 'Explore', l: ['Manifesto', 'Anatolian Roots', 'Why Alanya', 'Gallery'] },
@@ -29,9 +30,8 @@ export const Footer: React.FC = () => (
             You join. You build. You belong.
           </p>
 
-          <div style={{ marginTop: 40, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <a href="#" style={{ background: 'var(--turq)', color: 'var(--ink)', padding: '18px 28px', borderRadius: 999, fontWeight: 600, fontSize: 13, letterSpacing: '.1em', textTransform: 'uppercase' }}>Reserve your tent →</a>
-            <a href="#" style={{ border: '1px solid rgba(246,241,232,.3)', color: 'var(--paper)', padding: '18px 28px', borderRadius: 999, fontSize: 13, letterSpacing: '.1em', textTransform: 'uppercase' }}>Apply to speak</a>
+          <div style={{ marginTop: 40 }}>
+            <ReserveForm />
           </div>
 
           <div style={{ marginTop: 28, fontFamily: 'ui-monospace, monospace', fontSize: 12, color: 'rgba(246,241,232,.55)' }}>

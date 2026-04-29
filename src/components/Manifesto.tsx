@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 
 export const Manifesto: React.FC = () => (
   <section id="manifesto" style={{ paddingTop: 'var(--pad-section)', paddingBottom: 'var(--pad-section)', background: 'var(--paper)', borderTop: '1px solid var(--rule)' }}>
@@ -34,7 +35,7 @@ export const Manifesto: React.FC = () => (
 
         <div>
           <div style={{ aspectRatio: '3/4', borderRadius: 4, overflow: 'hidden', position: 'relative', background: '#0E0F12' }}>
-            <img
+            <Img
               src="/photo-belong.jpg"
               alt="Festival-goer laughing with phone and coffee — moment of belonging"
               loading="lazy"

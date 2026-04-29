@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 
 interface CardProps {
   kicker: string;
@@ -16,7 +17,7 @@ const Card: React.FC<CardProps> = ({ kicker, body, photo }) => (
 
 const PhotoSlot: React.FC<{ src: string; alt: string }> = ({ src, alt }) => (
   <div className="photo" style={{ aspectRatio: '4/5' }}>
-    <img
+    <Img
       src={src}
       alt={alt}
       loading="lazy"

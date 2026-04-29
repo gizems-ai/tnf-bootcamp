@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 
 const pillars = [
   { tag: 'AI AS LEVERAGE', head: 'Tools, agents, workflows.', body: 'Hands-on with the systems that 10x a solopreneur — from research to ops to ship.', bg: '#E6E7A3' },
@@ -60,7 +61,7 @@ export const Bootcamp: React.FC = () => (
 
         {/* Photo — founder */}
         <div style={{ gridColumn: 'span 2', gridRow: 'span 1', borderRadius: 6, overflow: 'hidden', position: 'relative', background: '#0E0F12' }}>
-          <img src="/photo-founder.jpg" alt="Founder running the 5-minute clarity exercise" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', objectPosition: 'center 25%' }} />
+          <Img src="/photo-founder.jpg" alt="Founder running the 5-minute clarity exercise" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', objectPosition: 'center 25%' }} />
           <div style={{ position: 'absolute', top: 14, left: 14, background: 'rgba(255,255,255,.92)', padding: '5px 10px', borderRadius: 999, fontSize: 10, letterSpacing: '.14em', textTransform: 'uppercase', fontWeight: 700, color: '#0E0F12' }}>CLARITY EXERCISE · DAY 2</div>
         </div>
 
@@ -80,7 +81,7 @@ export const Bootcamp: React.FC = () => (
 
         {/* Community photo */}
         <div style={{ gridColumn: 'span 2', gridRow: 'span 2', borderRadius: 6, overflow: 'hidden', position: 'relative', background: '#0E0F12' }}>
-          <img src="/photo-comments.jpg" alt="Community excitement — 'Love this place! Looking forward to spend some days there.'" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', objectPosition: 'center 30%' }} />
+          <Img src="/photo-comments.jpg" alt="Community excitement — 'Love this place! Looking forward to spend some days there.'" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', objectPosition: 'center 30%' }} />
           <div style={{ position: 'absolute', top: 14, left: 14, background: 'rgba(255,255,255,.92)', padding: '5px 10px', borderRadius: 999, fontSize: 10, letterSpacing: '.14em', textTransform: 'uppercase', fontWeight: 700, color: '#0E0F12' }}>BUILD-IN-PUBLIC · LIVE</div>
           <div style={{ position: 'absolute', left: 16, bottom: 14, right: 16, color: '#fff', fontFamily: 'var(--serif-italic)', fontStyle: 'italic', fontSize: 15, lineHeight: 1.35, textShadow: '0 1px 12px rgba(0,0,0,.7)' }}>"Love this place! Looking&nbsp;forward to spend some days there."</div>
         </div>

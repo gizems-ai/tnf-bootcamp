@@ -1,0 +1,46 @@
+import type { Copy } from './tr';
+
+export const en: Copy = {
+  hero: {
+    headline1: 'A temporary',
+    headlineEm1: 'village',
+    headline2: 'by the',
+    headlineEm2: 'Mediterranean.',
+    sub: 'For solopreneurs, builders and modern nomads.',
+    tagline: 'Freedom. Connection. Growth.',
+    cta: 'Reserve your spot →',
+    ctaSecondary: 'Read the manifesto',
+    earlyBird: 'Super Early Bird from €99',
+  },
+  nav: {
+    program: 'Program',
+    bootcamp: 'Bootcamp',
+    speakers: 'Speakers',
+    stay: 'Stay',
+    alanya: 'Alanya',
+    reserve: 'Reserve →',
+  },
+  footer: {
+    eyebrow: '◐ Final Call',
+    headline1: 'Build your',
+    headlineEm: 'solopreneur life.',
+    headline2: 'Join our',
+    headline3: 'temporary village.',
+    quote: "You don't just attend.\nYou join. You build. You belong.",
+    meta: 'October 18 — 25, 2026 · Anjeliq Downtown · Super Early Bird from €99',
+    tagline: "Curated by people who live the lifestyle. We don't build events. We build your temporary village.",
+    copy: '© MMXXVI Turkiye Nomad Fest',
+    madeBy: 'Made by the village, for the village',
+    values: 'Freedom · Connection · Growth',
+  },
+  form: {
+    namePlaceholder: 'Your name',
+    emailPlaceholder: 'Email address',
+    submit: 'Reserve your seat →',
+    submitting: 'Reserving…',
+    success: "✓ You're on the list. We'll be in touch soon.",
+    rateLimitError: 'Please wait a moment before submitting again.',
+    configError: 'Reservation endpoint not configured.',
+    genericError: 'Something went wrong. Please try again or email us directly.',
+  },
+};

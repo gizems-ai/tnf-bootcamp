@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 
 export const Hospitality: React.FC = () => (
   <section style={{ paddingTop: 'var(--pad-section)', paddingBottom: 'var(--pad-section)', background: 'var(--paper)' }}>
@@ -25,11 +26,11 @@ export const Hospitality: React.FC = () => (
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
           <div style={{ aspectRatio: '3/4', borderRadius: 4, overflow: 'hidden', position: 'relative', background: '#0E0F12' }}>
-            <img src="/photo-cay.jpg" alt="Turkish tea served in traditional glasses over Alanya bay" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            <Img src="/photo-cay.jpg" alt="Turkish tea served in traditional glasses over Alanya bay" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             <div style={{ position: 'absolute', left: 14, bottom: 12, fontFamily: 'ui-monospace, monospace', fontSize: 10, letterSpacing: '.08em', textTransform: 'uppercase', color: '#fff', textShadow: '0 1px 8px rgba(0,0,0,.6)' }}>◐ Çay · over the bay</div>
           </div>
           <div style={{ aspectRatio: '3/4', borderRadius: 4, overflow: 'hidden', position: 'relative', background: '#0E0F12', transform: 'translateY(40px)' }}>
-            <img src="/photo-flag.jpg" alt="Turkish flag at sunset on Alanya beach" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            <Img src="/photo-flag.jpg" alt="Turkish flag at sunset on Alanya beach" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             <div style={{ position: 'absolute', left: 14, bottom: 12, fontFamily: 'ui-monospace, monospace', fontSize: 10, letterSpacing: '.08em', textTransform: 'uppercase', color: '#fff', textShadow: '0 1px 8px rgba(0,0,0,.6)' }}>◐ Sunset · long table · 9pm</div>
           </div>
         </div>

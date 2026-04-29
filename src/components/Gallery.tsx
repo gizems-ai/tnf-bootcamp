@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 
 interface GalleryItem {
   caption: string;
@@ -36,7 +37,7 @@ export const Gallery: React.FC = () => (
         {items.map((it, i) => (
           <figure key={i} style={{ margin: '0 0 14px 0', breakInside: 'avoid', position: 'relative' }}>
             <div className="photo" style={{ aspectRatio: it.ratio, position: 'relative', overflow: 'hidden' }}>
-              <img
+              <Img
                 src={it.src}
                 alt={it.caption}
                 loading="lazy"

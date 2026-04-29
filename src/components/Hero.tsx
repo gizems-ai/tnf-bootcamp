@@ -1,4 +1,5 @@
 import React from 'react';
+import { Img } from './Img';
 import { Lockup } from './Shell';
 
 const DateStamp: React.FC = () => (
@@ -75,6 +76,7 @@ export const Hero: React.FC = () => (
 
           <div style={{ marginTop: 32, display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
             <a href="#join" style={{ background: 'var(--ink)', color: 'var(--paper)', padding: '18px 28px', borderRadius: 999, fontSize: 13, letterSpacing: '.1em', textTransform: 'uppercase', fontWeight: 700 }}>Reserve your spot →</a>
+            {/* ↑ scrolls to #join (footer) where ReserveForm lives */}
             <a href="#manifesto" style={{ padding: '18px 24px', borderRadius: 999, fontSize: 13, letterSpacing: '.1em', textTransform: 'uppercase', fontWeight: 700, color: 'var(--ink)', border: '1px solid var(--ink)' }}>Read the manifesto</a>
             <span style={{ fontFamily: 'ui-monospace, monospace', fontSize: 11, color: 'var(--ink-2)', marginLeft: 4 }}>Super Early Bird from €99</span>
           </div>
@@ -86,7 +88,7 @@ export const Hero: React.FC = () => (
 
         {/* Hero photograph */}
         <div style={{ position: 'relative', minHeight: 560, borderRadius: 4, overflow: 'hidden', background: 'var(--paper-2)' }}>
-          <img
+          <Img
             src="/photo-castle-beach.jpg"
             alt="Alanya castle walls meet the turquoise Mediterranean"
             loading="eager"
