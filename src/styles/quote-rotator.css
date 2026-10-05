@@ -1,0 +1,161 @@
+/* QuoteRotator — reusable testimonial/pull-quote section */
+
+.qr-section {
+  padding: var(--pad-section) var(--pad-x);
+  border-top: 1px solid var(--rule);
+}
+
+.qr-eyebrow {
+  margin-bottom: 36px;
+}
+
+.qr-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+
+/* ── Photo column ─────────────────────────────────────────── */
+.qr-photo-frame {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--paper-3);
+  box-shadow: 0 16px 40px -20px rgba(14, 15, 18, 0.22);
+}
+
+.qr-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.qr-attrib {
+  margin-top: 20px;
+}
+
+.qr-name {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.qr-role {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+.qr-sponsor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  background: var(--turq);
+  color: #0e0f12;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+
+.qr-sponsor-badge:hover {
+  background: var(--turq-deep);
+  color: #fff;
+}
+
+/* ── Quote column ─────────────────────────────────────────── */
+.qr-context {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin: 0 0 8px;
+  letter-spacing: 0.01em;
+  max-width: 560px;
+}
+
+.qr-mark {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-size: clamp(72px, 9vw, 128px);
+  line-height: 0.75;
+  background: var(--grad-cool);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 14px;
+  user-select: none;
+}
+
+.qr-quote {
+  font-family: var(--serif-italic);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(19px, 1.7vw, 27px);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+  quotes: none;
+  text-wrap: pretty;
+}
+
+/* ── Dots ─────────────────────────────────────────────────── */
+.qr-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: clamp(36px, 4vw, 56px);
+}
+
+.qr-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rule);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.qr-dot.active {
+  background: var(--turq-deep);
+  transform: scale(1.3);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .qr-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .qr-photo-frame {
+    aspect-ratio: 16/9;
+    max-height: 280px;
+  }
+
+  .qr-mark {
+    font-size: clamp(60px, 14vw, 96px);
+  }
+}
+
+@media (max-width: 480px) {
+  .qr-photo-frame {
+    aspect-ratio: 4/3;
+    max-height: unset;
+  }
+}

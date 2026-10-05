@@ -17,8 +17,10 @@ export const Img: React.FC<ImgProps> = ({ src, alt, style, ...rest }) => {
     return <img src={src} alt={alt} style={style} {...rest} />;
   }
 
+  // display:contents keeps <picture> out of the layout, so the <img> stays a
+  // direct layout child of whatever grid/flex/absolute context it was written in.
   return (
-    <picture>
+    <picture style={{ display: 'contents' }}>
       <source srcSet={webp} type="image/webp" />
       <img src={src} alt={alt} style={style} {...rest} />
     </picture>

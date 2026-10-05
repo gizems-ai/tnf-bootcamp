@@ -1,0 +1,76 @@
+/* Alternative speakers treatment: cut-out, desaturated portraits on brand gradients.
+   Loaded only by SpeakersAltPage — /speakers keeps speakers.css alone. */
+
+.spa-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 24px; }
+
+.spa-card { display: flex; flex-direction: column; }
+
+.spa-tile {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex; align-items: flex-end; justify-content: center;
+  margin-bottom: 20px;
+}
+/* Cutouts are pre-framed on the face (see scripts/normalise-cutouts) so every head
+   lands at the same scale — they fill the tile edge to edge.
+   The tight first shadow is a rim light: it keeps white shirts off a pale gradient. */
+.spa-cut {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block;
+  filter: drop-shadow(0 0 1px rgba(14, 15, 18, .45)) drop-shadow(0 14px 26px rgba(14, 15, 18, .28));
+  transition: transform .7s cubic-bezier(.2,.6,.2,1);
+}
+.spa-card:hover .spa-cut { transform: translateY(-6px) scale(1.02); }
+
+.spa-initials {
+  align-self: center;
+  font-family: var(--sans); font-weight: 800; font-size: 56px;
+  letter-spacing: -.03em; color: rgba(255,255,255,.85);
+}
+
+.spa-flag {
+  position: absolute; left: 14px; top: 14px;
+  background: rgba(255,255,255,.92); color: var(--ink);
+  padding: 7px 12px; border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase;
+}
+.spa-num {
+  position: absolute; right: 14px; top: 14px;
+  font-family: ui-monospace, monospace; font-size: 10px;
+  letter-spacing: .1em; color: rgba(255,255,255,.8);
+}
+
+.spa-name { font-family: var(--sans); font-weight: 800; font-size: 24px; letter-spacing: -.015em; line-height: 1.05; margin: 0; color: var(--ink); }
+.spa-role { font-family: var(--serif-italic); font-style: italic; font-size: 17px; color: var(--turq-deep); margin: 5px 0 0; }
+
+/* The session is what people scan for, so it outranks the bio: tinted panel,
+   accent rule, larger and darker type. Mirrors .sp-talk on the classic page. */
+.spa-talk {
+  margin: 16px 0 0;
+  padding: 13px 15px;
+  background: var(--paper-2);
+  border-left: 3px solid var(--turq);
+  border-radius: 4px;
+  font-size: 15px; line-height: 1.42; font-weight: 600;
+  letter-spacing: -.005em; color: var(--ink);
+}
+.spa-talk b {
+  display: block; font-family: ui-monospace, monospace;
+  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--turq-deep); font-weight: 700; margin-bottom: 6px;
+}
+/* Supporting copy — deliberately quieter than the session above it. */
+.spa-bio { font-size: 13px; line-height: 1.55; color: var(--ink-2); margin: 12px 0 0; }
+.spa-foot {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--rule);
+  font-family: ui-monospace, monospace; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase;
+}
+.spa-site { color: var(--ink-2); }
+
+@media (max-width: 1000px) { .spa-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; } }
+@media (max-width: 620px)  { .spa-grid { grid-template-columns: 1fr; } }

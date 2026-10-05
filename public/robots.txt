@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# The answer-engine crawlers are welcome too. They are already covered by the
+# rule above; naming them is just so the intent is unambiguous.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://turkiyenomadfest.com/sitemap.xml

@@ -1,0 +1,46 @@
+.stay-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 4vw, 80px); align-items: end; }
+@media (max-width: 880px) { .stay-hero-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 720px) {
+  .stay-two-col   { grid-template-columns: 1fr !important; }
+  .stay-three-col { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .stay-three-col { grid-template-columns: 1fr !important; }
+}
+
+.room-card { display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; align-items: stretch; padding: 32px 0; border-top: 1px solid var(--rule); }
+.room-card:last-of-type { border-bottom: 1px solid var(--rule); }
+@media (max-width: 720px) { .room-card { grid-template-columns: 1fr; gap: 18px; padding: 24px 0; } }
+.room-shape { aspect-ratio: 4/3; border-radius: 8px; background: var(--grad-island); position: relative; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(255,255,255,.4); }
+.room-shape.b { background: var(--grad-purple); }
+.room-shape.c { background: var(--grad-warm); }
+.room-shape.d { background: var(--grad-sunset); }
+.room-shape::after { content: ""; position: absolute; right: -30%; bottom: -40%; width: 120%; height: 120%; background: radial-gradient(closest-side, rgba(255,255,255,.35), transparent 60%); }
+.room-shape:has(img)::after { display: none; }
+.room-tag { position: absolute; left: 18px; top: 18px; font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; background: rgba(255,255,255,.85); color: var(--ink); padding: 6px 10px; border-radius: 999px; }
+.room-size { position: absolute; right: 18px; bottom: 18px; font-family: var(--serif-italic); font-style: italic; font-size: clamp(40px, 5vw, 72px); font-weight: 400; color: rgba(255,255,255,.85); letter-spacing: -.03em; line-height: 1; }
+.room-title { font-family: var(--sans); font-weight: 800; font-size: clamp(24px, 2.4vw, 34px); letter-spacing: -.02em; margin: 0 0 8px; }
+.room-sub   { font-family: var(--serif-italic); font-style: italic; color: var(--ink-2); margin: 0 0 16px; font-size: 17px; }
+.room-feats { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 8px; }
+.room-feats li { font-size: 11.5px; letter-spacing: .04em; padding: 5px 10px; border-radius: 999px; background: rgba(20,22,26,.05); color: var(--ink); }
+
+.amen-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+@media (max-width: 880px) { .amen-grid { grid-template-columns: repeat(2, 1fr); } }
+.amen-grid > div { background: var(--paper); padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 6px; min-height: 120px; }
+.amen-grid .ico  { font-family: var(--serif-italic); font-style: italic; font-size: 22px; color: var(--turq-deep); font-weight: 400; }
+.amen-grid .h    { font-weight: 700; font-size: 14px; letter-spacing: .01em; color: var(--ink); margin-top: 4px; }
+.amen-grid .d    { font-size: 12.5px; color: var(--ink-2); line-height: 1.5; }
+
+.fact-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2vw, 28px); }
+@media (max-width: 720px) { .fact-strip { grid-template-columns: repeat(2, 1fr); } }
+.fact { display: flex; flex-direction: column; gap: 6px; }
+.fact .n { font-family: var(--sans); font-weight: 800; font-size: clamp(36px, 4.4vw, 64px); line-height: 1; background: var(--grad-cool); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -.03em; }
+.fact .l  { font-size: 13px; color: var(--ink-2); font-family: ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+
+.nearby-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(28px, 4vw, 64px); }
+@media (max-width: 720px) { .nearby-list { grid-template-columns: 1fr; } }
+.nearby-list .row { display: grid; grid-template-columns: 1fr auto; gap: 18px; padding: 14px 0; border-bottom: 1px dashed var(--rule); align-items: baseline; }
+.nearby-list .row .name { font-weight: 600; font-size: 15px; }
+.nearby-list .row .meta { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-2); letter-spacing: .08em; }
+.nearby-list .row .desc { grid-column: 1 / -1; font-size: 13px; color: var(--ink-2); margin-top: 4px; }

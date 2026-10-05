@@ -1,0 +1,458 @@
+/* ── Homepage-only styles ───────────────────────────────────────────── */
+/* Scoped to .hp class on the HomePage root div.                        */
+/* Inner pages are NOT affected.                                         */
+
+/* ── Hero DateStamp spin ──────────────────────────────────────────── */
+@keyframes hp-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Edition info band ────────────────────────────────────────────── */
+.hp-edition-band {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 48px);
+  padding: 22px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: clamp(36px, 4.5vw, 64px);
+}
+
+/* ── Tile grid hover ──────────────────────────────────────────────── */
+.hp-tile {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.hp-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+.hp-tile-arrow {
+  width: 36px; height: 36px; border-radius: 999px;
+  background: #0E0F12; color: #fff;
+  font-size: 16px; line-height: 1;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background 0.18s ease;
+}
+.hp-tile:hover .hp-tile-arrow { background: var(--turq-deep); }
+
+/* ── Organiser cards ──────────────────────────────────────────────── */
+.hp-org-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.hp-org-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.hp-org-photo {
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+  background: #0E0F12;
+}
+.hp-org-photo img,
+.hp-org-photo picture img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.hp-org-photo::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 55%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.55) 100%);
+  pointer-events: none;
+}
+.hp-org-role {
+  position: absolute; left: 18px; bottom: 16px; z-index: 2;
+  font-family: var(--sans); font-weight: 700;
+  font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: #fff;
+}
+.hp-org-role em {
+  display: block;
+  font-family: var(--serif), serif;
+  font-style: italic; font-size: 18px; font-weight: 400;
+  letter-spacing: -.005em; text-transform: none;
+  margin-top: 4px; color: var(--aqua, #B8E8E6);
+}
+.hp-org-body {
+  padding: 24px 26px 26px;
+  display: flex; flex-direction: column;
+  flex: 1; gap: 12px;
+}
+.hp-org-name {
+  font-family: var(--sans); font-weight: 800;
+  font-size: 28px; letter-spacing: -.02em; line-height: 1.05;
+  margin: 0; color: var(--ink);
+}
+.hp-org-bio {
+  font-size: 14.5px; line-height: 1.6; color: var(--ink-2); margin: 0;
+}
+.hp-org-meta {
+  margin-top: auto; padding-top: 16px;
+  border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px;
+}
+.hp-sp-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--ink); font-weight: 600; text-decoration: none;
+}
+.hp-sp-link:hover { color: var(--turq-deep); }
+.hp-sp-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* ── Bootcamp mosaic hover ────────────────────────────────────────── */
+.hp-bc-tile {
+  border-radius: 6px; overflow: hidden; position: relative;
+  transition: transform 0.18s ease;
+}
+.hp-bc-tile:hover { transform: translateY(-2px); }
+
+/* ── Roots history cards ──────────────────────────────────────────── */
+.hp-roots-link {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-top: 32px; align-self: flex-start;
+  padding: 12px 20px;
+  border: 1px solid var(--ink); border-radius: 999px;
+  color: var(--ink); text-decoration: none;
+  font-family: ui-monospace, monospace;
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.hp-roots-link:hover { background: var(--ink); color: var(--paper); }
+
+/* ── Footer nav link hover ────────────────────────────────────────── */
+.hp-footer a:hover { color: var(--turq); }
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hp-org-grid { grid-template-columns: 1fr; }
+  .hp-footer-cta { grid-template-columns: 1fr !important; }
+
+  .hp-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-hero-grid > div:last-child {
+    aspect-ratio: 2/3 !important;
+    min-height: unset !important;
+  }
+
+  .hp-tiles-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 160px !important;
+  }
+  .hp-tiles-grid > a {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  .hp-bootcamp-mosaic {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: auto !important;
+  }
+  .hp-bootcamp-mosaic > * {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 160px;
+  }
+
+  .hp-roots-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hp-hosp-photos {
+    display: none !important;
+  }
+
+  .hp-hosp-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hp-why-intro {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hp-why-stat {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hp-why-cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hp-roots-history {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .hp-section-header {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hp-experience-row {
+    grid-template-columns: 56px 1fr !important;
+  }
+  .hp-experience-row > p {
+    display: none !important;
+  }
+
+  /* Manifesto: collapse label+content bands */
+  .hp-manifesto-band {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-manifesto-band > div:first-child {
+    display: none !important;
+  }
+  .hp-manifesto-lead {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* TilesGrid: what to expect */
+  .hp-expect-band {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-expect-band > div:first-child {
+    display: none !important;
+  }
+  .hp-expect-cols {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp-why-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-roots-history {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-bootcamp-mosaic {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.hp-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .hp-gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp-gallery-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hp-about-threads li {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-impact-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .hp-impact-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(31,31,31,.2);
+  }
+  .hp-footer-meta {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hp-footer-meta {
+    grid-template-columns: 1fr !important;
+  }
+  .hp-footer-legal {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+}
+
+/* ── Mobile length pass ─────────────────────────────────────────────
+   Phones stacked every portrait photo full-width (3/4 ≈ 490px each),
+   making the page ~25 screens tall. Shorten tall single portraits and
+   pack photo groups tighter — CSS only, no crop-composition change
+   beyond object-fit, desktop untouched. */
+@media (max-width: 768px) {
+  /* A touch less air between sections */
+  body { --pad-section: clamp(48px, 12vw, 96px) !important; }
+}
+
+@media (max-width: 900px) {
+  /* Hero copy column carries an inline min-height: 620 for the desktop
+     two-column balance — pointless once stacked, so release it. */
+  .hp-hero-grid > div:first-child { min-height: 0 !important; }
+}
+
+@media (max-width: 640px) {
+  /* Tall single portraits → shorter landscape crop */
+  .hp-manifesto-lead figure { aspect-ratio: 16 / 10 !important; margin-top: 0 !important; }
+  .hp-roots-grid > figure   { aspect-ratio: 16 / 10 !important; }
+
+  /* Hero photo: squarer so it isn't a 585px slab */
+  .hp-hero-grid > div:last-child { aspect-ratio: 4 / 5 !important; }
+
+  /* Photo groups: 2-up instead of one giant vertical stack */
+  .hp-why-cards     { grid-template-columns: repeat(2, 1fr) !important; }
+  .hp-roots-history { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* "What it's about" threads: two per row instead of five tall rows */
+  .hp-about-threads { grid-template-columns: repeat(2, 1fr) !important; column-gap: clamp(16px, 4vw, 28px) !important; }
+
+  /* NOTE: org photos keep their natural 4/5 on mobile too — a shorter
+     landscape crop cut the organisers' faces (portraits, face near top). */
+
+  /* Gallery → swipeable horizontal rail (peek of next photo = affordance) */
+  .hp-gallery-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px !important;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .hp-gallery-grid::-webkit-scrollbar { display: none; }
+  .hp-gallery-grid > figure {
+    flex: 0 0 62% !important;
+    scroll-snap-align: start;
+  }
+}
+
+/* ── Week programme ─────────────────────────────────────────────────────────
+   A wide schedule grid. Scaling it down to phone width would make the cell
+   type unreadable, so below 900px it keeps a legible minimum width and the
+   viewer swipes it sideways instead. */
+.hp-prog-scroll {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0E0F12;
+}
+.hp-prog-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hp-prog-cap {
+  margin-top: 14px;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-2);
+}
+.hp-prog-cap a { color: var(--ink); font-weight: 600; }
+.hp-prog-cap a:hover { color: var(--turq-deep); }
+/* The swipe hint is only true once the image actually overflows. */
+.hp-prog-hint { display: none; }
+
+@media (max-width: 900px) {
+  .hp-prog-head { grid-template-columns: 1fr !important; }
+
+  .hp-prog-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .hp-prog-scroll::-webkit-scrollbar { display: none; }
+  .hp-prog-img { width: auto; min-width: 860px; max-width: none; }
+  .hp-prog-hint { display: inline; }
+}
+
+/* ── Week at a glance (rendered from src/data/weekSchedule.ts) ───────────────
+   ≥1200px: 8-day × 5-row grid. Below: one card per day. */
+.wk-wrap { --rule: rgba(20,22,26,.10); font-family: var(--sans); }
+.wk-wrap svg { stroke-width: 1.75; flex: none; }
+.wk-mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.wk-desktop { display: none; }
+.wk-mobile { display: block; }
+@media (min-width: 1200px) {
+  .wk-desktop { display: block; }
+  .wk-mobile { display: none; }
+}
+
+.wk-grid {
+  display: grid;
+  grid-template-columns: 176px repeat(8, minmax(0, 1fr));
+  grid-template-rows: 64px minmax(72px, auto) minmax(190px, auto) minmax(52px, auto) minmax(92px, auto) minmax(76px, auto);
+  background: #fff; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
+}
+.wk-grid > div { border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 8px; min-width: 0; display: flex; }
+.wk-grid > div.lc { border-right: 0; }
+.wk-grid > div.lr { border-bottom: 0; }
+.wk-corner { background: var(--paper-2); }
+.wk-hd { align-items: center; justify-content: center; gap: 8px; background: var(--paper-2); }
+.wk-hd .n { font-weight: 800; font-size: 30px; letter-spacing: -.03em; line-height: 1; }
+.wk-hd .d { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; letter-spacing: .14em; color: var(--ink-2); }
+.wk-rl { align-items: center; gap: 12px; padding: 0 18px !important; }
+.wk-rl svg { width: 22px; height: 22px; color: var(--turq-deep); }
+.wk-rl span { font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+.wk-rl.big span { font-size: 14px; font-weight: 800; }
+.wk-rl.big svg { color: var(--sky); }
+.wk-cell > * { flex: 1; min-width: 0; }
+.wk-empty { align-items: center; justify-content: center; }
+.wk-empty::before { content: ""; width: 16px; height: 1px; background: var(--rule); }
+
+.wk-tile { border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4px; padding: 6px 8px; }
+.wk-tile .t { font-weight: 700; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; line-height: 1.25; text-wrap: balance; }
+.wk-tile .tm { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: var(--ink-2); letter-spacing: .06em; }
+.wk-tile svg { width: 20px; height: 20px; margin-bottom: 2px; }
+.wk-tile.yellow { background: var(--yellow); }
+.wk-tile.aqua { background: var(--aqua); } .wk-tile.aqua svg { color: var(--turq-deep); }
+.wk-tile.lilac { background: var(--lilac); } .wk-tile.lilac svg { color: #7C5BB0; }
+.wk-tile.pink { background: var(--pink); } .wk-tile.pink svg { color: #B0457A; }
+.wk-tile.neutral { background: var(--paper-2); } .wk-tile.neutral svg { color: var(--ink-2); }
+
+.wk-talk { border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; padding: 16px 10px 12px; position: relative; overflow: hidden; }
+.wk-talk .k { font-weight: 800; font-size: 21px; line-height: 1.02; letter-spacing: -.02em; text-transform: uppercase; text-wrap: balance; }
+.wk-talk .k em { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; text-transform: none; font-size: 26px; letter-spacing: -.01em; color: var(--turq-deep); margin-top: 2px; }
+.wk-talk .s { font-size: 13px; font-weight: 600; line-height: 1.45; color: var(--ink-2); text-wrap: balance; }
+.wk-talk.featured { background: #fff; border: 1.5px solid var(--ink); }
+.wk-talk.featured::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: linear-gradient(90deg, var(--turq), var(--aqua), var(--yellow)); }
+.wk-talk.soft { background: var(--paper-2); }
+
+.wk-labs { align-items: center; }
+.wk-bar { flex: 1; height: 100%; min-height: 40px; border-radius: 8px; background: var(--grad-cool); color: #fff; display: flex; align-items: center; justify-content: center; gap: 14px; font-weight: 800; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; padding: 8px 12px; flex-wrap: wrap; text-align: center; }
+.wk-bar svg { width: 18px; height: 18px; stroke-width: 2.25; }
+.wk-bar i { font-style: normal; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; font-size: 11px; letter-spacing: .12em; opacity: .9; }
+
+.wk-legend { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.wk-legend > div { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #fff; border: 1px solid var(--rule); border-radius: 10px; }
+.wk-legend .sw { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+.wk-legend .sw.yellow { background: var(--yellow); } .wk-legend .sw.aqua { background: var(--aqua); }
+.wk-legend .sw.pink { background: var(--pink); } .wk-legend .sw.grad-cool { background: var(--grad-cool); }
+.wk-legend b { font-weight: 700; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; }
+.wk-legend .note { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-2); }
+@media (max-width: 900px) { .wk-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .wk-legend { grid-template-columns: 1fr; } }
+
+.wk-stack { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.wk-day { background: #fff; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.wk-day header { display: flex; align-items: baseline; gap: 10px; padding: 12px 16px; background: var(--paper-2); }
+.wk-day header .n { font-weight: 800; font-size: 28px; letter-spacing: -.03em; line-height: 1; }
+.wk-day header .d { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; letter-spacing: .14em; color: var(--ink-2); }
+.wk-day-body { display: flex; flex-direction: column; gap: 8px; padding: 12px; }
+.wk-day-row { display: flex; flex-direction: column; gap: 4px; }
+.wk-day-row .lbl { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); }
+.wk-day-row.talk .wk-talk { padding: 22px 12px 16px; }
+.wk-day-row .wk-tile { flex-direction: row; justify-content: center; gap: 8px; padding: 10px; }
+.wk-day-row .wk-tile svg { margin: 0; }

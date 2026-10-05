@@ -10,7 +10,6 @@ export const en: Copy = {
     tagline: 'Freedom. Connection. Growth.',
     cta: 'Reserve your spot →',
     ctaSecondary: 'Read the manifesto',
-    earlyBird: 'Super Early Bird from €99',
   },
   nav: {
     program: 'Program',
@@ -27,7 +26,7 @@ export const en: Copy = {
     headline2: 'Join our',
     headline3: 'temporary village.',
     quote: "You don't just attend.\nYou join. You build. You belong.",
-    meta: 'October 18 — 25, 2026 · Anjeliq Downtown · Super Early Bird from €99',
+    meta: 'October 18 — 25, 2026 · Anjeliq Downtown, Alanya',
     tagline: "Curated by people who live the lifestyle. We don't build events. We build your temporary village.",
     copy: '© MMXXVI Turkiye Nomad Fest',
     madeBy: 'Made by the village, for the village',

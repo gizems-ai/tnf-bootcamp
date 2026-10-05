@@ -35,6 +35,7 @@ interface WordmarkProps {
 
 export const Wordmark: React.FC<WordmarkProps> = ({ size = 14, tone = 'ink' }) => (
   <span
+    className="tnf-wordmark"
     style={{
       fontFamily: 'var(--sans)',
       fontWeight: 600,
@@ -56,29 +57,37 @@ interface LockupProps {
   markSize?: number;
   gap?: number;
   tone?: 'ink' | 'paper';
+  wordSize?: number;
+  subSize?: number;
+  sub?: string;
 }
 
 export const Lockup: React.FC<LockupProps> = ({
   markSize = 40,
   gap = 14,
   tone = 'ink',
+  wordSize = 11,
+  subSize = 12,
+  sub = 'Alanya, MMXXVI',
 }) => (
   <div style={{ display: 'flex', alignItems: 'center', gap }}>
     <LogoMark size={markSize} color={tone === 'paper' ? 'paper' : 'currentColor'} />
     <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-      <Wordmark size={11} tone={tone} />
+      <Wordmark size={wordSize} tone={tone} />
       <span
+        className="tnf-sub"
         style={{
           fontFamily: 'var(--serif-italic)',
           fontStyle: 'italic',
-          fontSize: 12,
+          fontSize: subSize,
           letterSpacing: '-.005em',
           color:
             tone === 'paper' ? 'rgba(246,241,232,.7)' : 'rgba(31,31,31,.6)',
           lineHeight: 1,
+          whiteSpace: 'nowrap',
         }}
       >
-        Alanya, MMXXVI
+        {sub}
       </span>
     </div>
   </div>
