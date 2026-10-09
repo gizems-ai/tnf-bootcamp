@@ -230,7 +230,7 @@ const SCHEDULE_2026: DayData[] = [
       MORNING, BREAKFAST,
       R('10:00–10:20', 'Opening remarks', 'well', 'Anthony Muiruri // Neşen Yücel x Gizem Burteçin x Mine Dedekoca'),
       R('10:30–11:00', 'Turkish Nomad Visa', 'well', 'Fireside · Mine Dedekoca x Ministry'),
-      R('11:00–11:20', 'How to overcome FOMO', 'well', 'Tom Burden'),
+      R('11:00–11:20', 'Create your own wave', 'well', 'Deniz Toprak'),
       R('11:30–12:10', 'Panel: Nomad events & trends', 'well', 'Neşen Yücel / Pelé Philipp Alexander Weber / Gonçalo Hall / Nomio team'),
       R('12:15–12:45', 'Become a Solopreneur with AI as your co-founder', 'rw', 'Gizem Burteçin'),
       LUNCH('12:45–14:30'),
@@ -254,7 +254,7 @@ const SCHEDULE_2026: DayData[] = [
   { n: '05', day: 'Thu · Oct 22', title: 'Income & community.', sub: 'Skool, Upwork, tax strategy, and a photo shoot at the castle.', pill: ['turq', 'Day 5'],
     rows: [
       MORNING, BREAKFAST,
-      R('10:00–10:20', 'Create your own wave', 'well', 'Deniz Toprak'),
+      R('10:00–10:20', 'How to Trust Your Gut — 10 Ways to Be the Luckiest Person in the Room', 'well', 'Chelsea Rustrum'),
       R('10:20–10:40', 'How anyone can turn a (Skool) community into $100K, step by step', 'rw', 'Dion van der Made'),
       R('10:40–11:10', 'Building real income on Upwork', 'rw', 'Gokce Demirtas'),
       R('11:15–11:45', 'Your tax strategy: how digital nomads legally pay less tax', 'rw', 'Charlene Gout'),
