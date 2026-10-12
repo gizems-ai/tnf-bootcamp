@@ -52,6 +52,19 @@ export const SPEAKERS_2026: Speaker2026[] = [
     site: 'MeetAchieve.com',
     photo: 'speaker-anthony-mc.jpg',
   },
+  {
+    name: 'Maya Middlemiss',
+    role: 'Founder · Remote Work Europe · Co-founder · Solopreneur Superpowers',
+    bio: 'Has worked remotely since 2000 — as a freelancer, employee, contractor and company owner — and has spent her career on the future of work and business. A freelance writer, speaker and remote work specialist, she founded Remote Work Europe, writes the Remote Readiness book series, and co-founded Solopreneur Superpowers, an AI-augmented build partnership that helps small services businesses systematise their operations. A Brit and Estonian e-resident, she lives near Valencia, Spain.',
+    format: 'keynote',
+    formatLabel: 'Keynote',
+    talk: ['Keynote · 30 min', "The Remote Work Revolution Isn't Over. It's Just Beginning."],
+    pal: 'dawn',
+    link: 'https://www.linkedin.com/in/mmiddlemiss/',
+    linkLabel: 'LinkedIn',
+    site: 'remoteworkeurope.eu',
+    photo: 'speaker-maya.jpg',
+  },
   // Jean-Baptiste Michel (NomadWay) — taken off the page 2026-08-22.
   // Assets stay in place (public/speaker-jb.jpg + public/cut/speaker-jb.webp),
   // so uncommenting this block is all it takes to put him back.
