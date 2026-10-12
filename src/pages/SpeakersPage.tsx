@@ -123,6 +123,18 @@ export const SPEAKERS_2026: Speaker2026[] = [
     photo: 'speaker-andrew.jpg',
   },
   {
+    name: 'Yura Karpenko',
+    role: 'Speaker · Social media growth',
+    bio: 'Joins the line-up with a 20-minute talk on how to grow your followers fast. Full bio announced soon.',
+    format: 'keynote',
+    formatLabel: 'Talk',
+    talk: ['Talk · 20 min', 'How to boost your followers instantly?'],
+    pal: 'sunset',
+    link: '#',
+    linkLabel: 'Profile',
+    photo: 'speaker-yura.jpg',
+  },
+  {
     name: 'Chantelle Flores',
     role: 'Photographer · Visual storyteller · Kzara Visual',
     bio: 'Photographer, visual storyteller and traveller who has captured life across 89 countries. Combining more than two decades of photography with her academic background in Psychology, Chantelle explores how memory, emotion, culture and personal experience shape what we notice — and what we choose to preserve. Her interactive workshop invites you to look beyond camera settings and discover the most powerful lens you carry: your own story.',
