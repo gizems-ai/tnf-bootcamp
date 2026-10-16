@@ -21,7 +21,8 @@ if (!SRC) { console.error('usage: node scripts/normalise-cutouts.mjs <src-dir>')
 const OUT = 'public/cut';
 const TMP = join(SRC, '.cut');
 const TW = 760, TH = 950;   // 4:5 tile
-const F = 0.30;             // face height as a share of tile height
+const F0 = 0.30;            // face height as a share of tile height
+const FIT_BOTTOM = !!process.env.FIT_BOTTOM; // tight-cropped sources: zoom in until the photo's bottom edge meets the tile bottom (the fade hides it)
 const EYE = 0.36;           // face centre, measured down from the tile top
 const FADE = 0.88;          // alpha ramps to zero over the last 12% — hides hard crop edges
 
@@ -47,6 +48,7 @@ for (const file of sources.sort()) {
   const [fx, fy, fw, fh] = probe.split(' ').map(Number);
   const { width: W, height: H } = await sharp(cut).metadata();
 
+  const F = FIT_BOTTOM ? Math.max(F0, (fh * (1 - EYE)) / (H - (fy + fh / 2))) : F0;
   const cw = Math.round((fh / F) * 0.8), ch = Math.round(fh / F);
   const top = Math.round(fy + fh / 2 - EYE * ch);
   const left = Math.round(fx + fw / 2 - cw / 2);

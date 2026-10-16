@@ -73,6 +73,10 @@
 .sp-filter button { appearance: none; border: 0; background: transparent; padding: 9px 18px; border-radius: 999px; font-family: var(--sans); font-weight: 600; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); cursor: pointer; }
 .sp-filter button.active { background: var(--ink); color: var(--paper); }
 .sp-filter button:hover:not(.active) { color: var(--ink); }
+@media (max-width: 520px) {
+  .sp-filter { max-width: 100%; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+  .sp-filter button { padding: 9px 11px; font-size: 10.5px; letter-spacing: .08em; }
+}
 
 .apply-card {
   background: var(--ink); color: var(--paper);

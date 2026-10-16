@@ -136,8 +136,8 @@ export const SPEAKERS_2026: Speaker2026[] = [
   },
   {
     name: 'Işık Kardelen',
-    role: 'Founder · TUNE Your Body & Mind · Yoga teacher RYT500',
-    bio: 'Istanbul-based yoga teacher (RYT500) and founder of TUNE Your Body & Mind and Yogazero.com. Brings a practical body reset to the nomad desk life — a short session on how to undo long hours of sitting, screens and travel. Full bio announced soon.',
+    role: 'Movement educator · Founder · TUNE Your Body & Mind',
+    bio: 'After 15 years in corporate technology, sales and business development, Işık turned her attention to a question modern working life often ignores: what happens to the body that has to live it? A Franklin Method® Educator, she explores the relationship between movement, functional anatomy, embodied awareness and human performance. At Türkiye Nomad Fest she guides a practical reset for bodies that work, travel and adapt to constantly changing environments — through gentle movement, tactile awareness and simple imagery, you practise a portable process for noticing what your body needs and adapting wherever you are. No special equipment, no perfect posture, no demanding routine. Because the future of work has a body.',
     format: 'keynote',
     formatLabel: 'Talk',
     talk: ['Talk · 30 min', 'The Nomad Body Reset.'],
