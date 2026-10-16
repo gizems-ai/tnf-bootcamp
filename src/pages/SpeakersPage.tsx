@@ -135,6 +135,18 @@ export const SPEAKERS_2026: Speaker2026[] = [
     photo: 'speaker-yura.jpg',
   },
   {
+    name: 'Işık Kardelen',
+    role: 'Founder · TUNE Your Body & Mind · Yoga teacher RYT500',
+    bio: 'Istanbul-based yoga teacher (RYT500) and founder of TUNE Your Body & Mind and Yogazero.com. Brings a practical body reset to the nomad desk life — a short session on how to undo long hours of sitting, screens and travel. Full bio announced soon.',
+    format: 'keynote',
+    formatLabel: 'Talk',
+    talk: ['Talk · 30 min', 'The Nomad Body Reset.'],
+    pal: 'dawn',
+    link: 'https://www.linkedin.com/in/i%C5%9F%C4%B1k-kardelen-b202294/',
+    linkLabel: 'LinkedIn',
+    photo: 'speaker-isik.jpg',
+  },
+  {
     name: 'Chantelle Flores',
     role: 'Photographer · Visual storyteller · Kzara Visual',
     bio: 'Photographer, visual storyteller and traveller who has captured life across 89 countries. Combining more than two decades of photography with her academic background in Psychology, Chantelle explores how memory, emotion, culture and personal experience shape what we notice — and what we choose to preserve. Her interactive workshop invites you to look beyond camera settings and discover the most powerful lens you carry: your own story.',
