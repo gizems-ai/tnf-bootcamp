@@ -63,7 +63,7 @@ export const SPEAKERS_2026: Speaker2026[] = [
     link: 'https://www.linkedin.com/in/mmiddlemiss/',
     linkLabel: 'LinkedIn',
     site: 'remoteworkeurope.eu',
-    photo: 'speaker-maya.jpg',
+    photo: 'speaker-maya-v2.jpg',
   },
   // Jean-Baptiste Michel (NomadWay) — taken off the page 2026-08-22.
   // Assets stay in place (public/speaker-jb.jpg + public/cut/speaker-jb.webp),
@@ -120,7 +120,7 @@ export const SPEAKERS_2026: Speaker2026[] = [
     link: 'https://www.remotetribe.life/',
     linkLabel: 'Profile',
     site: 'remotetribe.life',
-    photo: 'speaker-andrew.jpg',
+    photo: 'speaker-andrew-v2.jpg',
   },
   {
     name: 'Yura Karpenko',
@@ -132,7 +132,7 @@ export const SPEAKERS_2026: Speaker2026[] = [
     pal: 'sunset',
     link: '#',
     linkLabel: 'Profile',
-    photo: 'speaker-yura.jpg',
+    photo: 'speaker-yura-v2.jpg',
   },
   {
     name: 'Işık Kardelen',
