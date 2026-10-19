@@ -232,7 +232,7 @@ const SCHEDULE_2026: DayData[] = [
       R('10:00–10:20', 'Opening remarks', 'well', 'Anthony Muiruri // Neşen Yücel x Gizem Burteçin x Mine Dedekoca'),
       R('10:30–11:00', 'Turkish Nomad Visa', 'well', 'Fireside · Mine Dedekoca x Ministry'),
       R('11:00–11:20', 'Create your own wave', 'well', 'Deniz Toprak'),
-      R('11:30–12:10', 'Panel: Nomad events & trends', 'well', 'Neşen Yücel / Pelé Philipp Alexander Weber / Gonçalo Hall / Andrew Williams (Remote Tribe) / Nomio team'),
+      R('11:30–12:10', 'Panel: Nomad events & trends', 'well', 'Neşen Yücel / Andrew Williams (Remote Tribe) / Gonçalo Hall / Pelé Philipp Alexander Weber'),
       R('12:15–12:45', 'Become a Solopreneur with AI as your co-founder', 'rw', 'Gizem Burteçin'),
       LUNCH('12:45–14:30'),
       R('14:30–16:00', 'AI Bootcamp Zero: Your first useful workflow', 'aiy', 'Seth Ward'),
