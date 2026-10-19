@@ -333,7 +333,7 @@ export const SPEAKERS_2026: Speaker2026[] = [
     photo: 'speaker-sofia.jpg',
   },
   {
-    name: 'Stratos Papay',
+    name: 'Stratos Papaporfyriou',
     role: 'Personal trainer · Digital nomad posture specialist',
     bio: 'Athens-based personal trainer who works on posture, mobility and physical resilience for desk workers and remote professionals. Practical movement strategies that need no gym — delivered for companies, wellbeing events and the Athens nomad community.',
     format: 'workshop',

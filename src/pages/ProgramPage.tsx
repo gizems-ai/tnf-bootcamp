@@ -262,7 +262,7 @@ const SCHEDULE_2026: DayData[] = [
       R('11:50–12:25', "AI Skills to Unlock Community: the solopreneur's toolkit for working (and growing) anywhere", 'aiy', 'Farhan Quasem'),
       LUNCH('12:25–14:00'),
       R('14:00–15:30', 'AI Bootcamp', 'aiy', 'Seth Ward'),
-      R('15:30–16:15', 'Anywhere Body: freedom of movement for people with freedom of location', 'well', 'Stratos Papay'),
+      R('15:30–16:15', 'Anywhere Body: freedom of movement for people with freedom of location', 'well', 'Stratos Papaporfyriou'),
       R('16:15–18:00', 'The Invisible Lens: photo shooting workshop at the castle', 'culture', 'Chantelle Flores / Zeynep Karagöz'),
       R('20:00+', 'Beach party with Hi-Frequency', 'social', 'Anjeliq House'),
     ] },
