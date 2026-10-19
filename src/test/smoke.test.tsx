@@ -2,6 +2,7 @@ import { render, screen, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { Hero } from '../components/Hero';
+import { TopBar } from '../components/TopBar';
 import { Manifesto } from '../components/Manifesto';
 import { Roots } from '../components/Roots';
 import { Alanya } from '../components/Alanya';
@@ -33,15 +34,15 @@ describe('Hero content', () => {
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
   });
 
-  it('has main navigation landmark', () => {
-    render(<Hero />);
+  it('top bar has main navigation landmark', () => {
+    render(<TopBar />);
     expect(screen.getByRole('navigation', { name: /main navigation/i })).toBeInTheDocument();
   });
 
-  it('Reserve CTA links to #join', () => {
+  it('Join CTA links to the registration page', () => {
     render(<Hero />);
-    const links = screen.getAllByRole('link', { name: /reserve/i });
-    expect(links.some(l => l.getAttribute('href') === '#join')).toBe(true);
+    const links = screen.getAllByRole('link', { name: /join|register|ticket|reserve/i });
+    expect(links.some(l => (l.getAttribute('href') ?? '').includes('eventzilla.net'))).toBe(true);
   });
 });
 
