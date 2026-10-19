@@ -204,7 +204,7 @@ const SCHEDULE: DayData[] = [
 
 const R = (time: string, text: string, trk: TrackKey, who?: string): DayRow => ({ time, content: <Sess t={text} who={who} />, trk });
 const MORNING = R('08:00–09:00', 'Active morning — running club, yoga or beach walk', 'social', 'Anjeliq Beach');
-const BREAKFAST = R('08:30–10:00', 'Breakfast', 'social', 'Free for Anjeliq Hotel guests');
+const BREAKFAST = R('08:30–10:00', 'Turkish Breakfast', 'social', 'Free for Anjeliq Hotel guests');
 const LUNCH = (t: string) => R(t, 'Lunch time with Authentic Turkish Food', 'social', 'Paid @Anjeliq Downtown');
 const TOWN = R('19:30+', 'Choose your dinner place', 'social', 'Alanya town');
 
