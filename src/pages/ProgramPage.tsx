@@ -219,11 +219,12 @@ const SCHEDULE_2026: DayData[] = [
   { n: '02', day: 'Mon · Oct 19', title: 'Opening circle.', sub: 'Build. Belong. Breathe.', pill: ['turq', 'Day 2'],
     rows: [
       BREAKFAST,
-      R('10:00–16:00', 'Open coworking lounge', 'rw', 'Optional'),
-      R('10:00–16:00', 'Enjoy Golden Cleopatra Beach', 'social', 'Anjeliq Beach'),
+      R('10:00–15:00', 'Free time — coworking lounge', 'rw', 'Optional'),
+      R('10:00–15:00', 'Enjoy Golden Cleopatra Beach', 'social', 'Anjeliq Beach'),
       LUNCH('12:30–14:30'),
-      R('17:00–19:30', 'Opening Circle: Build. Belong. Breathe.', 'culture', 'Anjeliq House Hotel'),
-      R('20:30–22:00', 'Chat & dine', 'social', 'Optional social dinner at Anjeliq House'),
+      R('15:00', 'Meet at Anjeliq Downtown — walk to the old city, with a short swim break in the historic scenery', 'culture', 'Bring your swimsuit and towel if you want to dip in the sea'),
+      R('17:00–19:30', 'Opening Circle around the fire: Build. Belong. Breathe.', 'culture', 'Walk to Anjeliq House Hotel'),
+      R('19:30+', 'Dinner, then the after party', 'social', 'After the circle'),
     ] },
   { n: '03', day: 'Tue · Oct 20', title: 'Festival opens.', sub: 'Nomad visa, FOMO, and your first AI workflow.', pill: ['lav', 'Day 3'],
     rows: [

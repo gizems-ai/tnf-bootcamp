@@ -46,18 +46,18 @@ export const WEEK_DAYS: Day[] = [
     "talks": {
       "title": "Opening Circle",
       "lines": [
-        "Coworking",
-        "Cleopatra Beach"
+        "Old City Walk",
+        "Fire Circle"
       ],
       "variant": "soft"
     },
     "afternoon": {
-      "title": "Coworking · Cleopatra Beach",
+      "title": "Free Time · Old City Swim",
       "icon": "waves",
       "tone": "aqua"
     },
     "evening": {
-      "title": "Chat & Dine",
+      "title": "Dinner · After Party",
       "icon": "utensils",
       "tone": "neutral"
     }
